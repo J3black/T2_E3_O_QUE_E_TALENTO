@@ -16,7 +16,7 @@
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 1000;
+  z-index: 40px;
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -41,17 +41,18 @@
   will-change: transform, opacity;
   position: relative;
   padding: 2.4rem;
-  background: #ffebee;
+  background: #fff;
   background-clip: padding-box;
   box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
   opacity: 0;
-  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.2s cubic-bezier(0.2, 1, 0.3, 1);
+  z-index: 10;
 }
 .modal__content--active {
   opacity: 1;
 }
 .modal__close {
-  z-index: 1100;
+  z-index: 40px;
   cursor: pointer;
 }
 .modal__trigger {
@@ -74,13 +75,18 @@
       -ms-user-select: none;
           user-select: none;
   transition: all 0.2s cubic-bezier(0.2, 0.2, 0.2, 0.2);
-  z-index: 10px;
+  z-index: 40px;
 }
 .modal__trigger--active {
-  z-index: 10;
+  z-index: 40px;
 }
 .modal__trigger:hover {
-  background: #e5d3d6;
+  background: #62B3E2;
+  border: 4px solid #fff;
+  font-family: Gotham;
+  font-size: 2.4em;
+  font-weight: 500;
+  color: #fff;
 }
 #modal__temp {
   will-change: transform, opacity;
@@ -89,17 +95,19 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #ffebee;
+  border-radius: 10px;
+  background: #fff;
   transform: none;
   opacity: 1;
-  transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(1, 1, 1, 1);
+  z-index: 40px;
 }
 /**
  * Demo specific CSS
  */
 .demo-btns header {
   padding: 7vh 10vw;
-  background: #ffebee;
+  background: #fff;
   display: flex;
   align-items: center;
 }
